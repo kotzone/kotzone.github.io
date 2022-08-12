@@ -1,5 +1,6 @@
-Here you can say lots of fun things about your site.
+Työn alla olevat opinnot:
+tryhackme.com - Jr. Penetration Tester; mooc.fi Cyber Secu
+mooc.fi - Securing Software
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+Valmiit:
+mooc.fi - Introduction to Cyber Security; Ohjelmoinnin perusteet (Python); Tietokantojen perusteet 
