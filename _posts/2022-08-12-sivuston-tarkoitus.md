@@ -1,4 +1,4 @@
-## Syitä, jonka vuoksi sivusto on olemassa
+## Sivuston tarkoitus
 Sivuston tarkoituksena on testata GitHub Pages -palvelua sekä toimia opiskelupäiväkirjana ja muistiinpanovälineenä tietoturvaopintojen ohessa.
 
 Pääasiallinen opiskelualusta on tryhackme.com ja sen Learning Path -opintopolut. Profiili löytyy täältä: https://tryhackme.com/p/kotzone
