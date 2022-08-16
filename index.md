@@ -1,6 +1,3 @@
-Työn alla olevat opinnot:
-tryhackme.com - Jr. Penetration Tester; mooc.fi Cyber Secu
-mooc.fi - Securing Software
+Blogi tietoturvaopinnoista.
 
-Valmiit:
-mooc.fi - Introduction to Cyber Security; Ohjelmoinnin perusteet (Python); Tietokantojen perusteet 
+Tehty käyttäen tätä mainiota ohjetta + sivustotemplaattia: https://chadbaldwin.net/2021/03/14/how-to-build-a-sql-blog.html
