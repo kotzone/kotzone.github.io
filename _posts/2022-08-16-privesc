@@ -10,7 +10,7 @@ Käyttöoikeuksia voidaan nostaa monella tavalla, riippuen kohdejärjestelmäst�
 
 ## Sudo-haavoittuvuudet
 
-´´´tsql
+´´´bash
 sudo -l
 ´´´
 -- Lisää tulossa --
