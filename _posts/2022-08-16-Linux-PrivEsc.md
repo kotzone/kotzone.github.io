@@ -1,4 +1,4 @@
-## Privilege Escalation
+## Privilege Escalation: Linux
 
 Käyttöoikeuksien nostaminen tapahtuu, kun ensimmäinen jalansija ja alhaisen tason käyttäjätunnus on saatu haltuun.
 Tavoite on saada lisää oikeuksia ja päästä mahdollisesti liikkumaan kohdejärjetelmän osiin, joihin ensimmäisellä kaapatulla käyttäjätunnuksella ei välttämättä ole oikeuksia.
