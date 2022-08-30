@@ -24,3 +24,12 @@ Powershell-historia (cmd.exe ajettuna):
 ```cmd
 %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
+
+Tallennetut käyttäjätunnukset:
+```cmd
+cmdkey /list
+```
+Jos löytyy jotain, niin:
+```cmd
+runas /savecred /user:admin cmd.exe
+```
