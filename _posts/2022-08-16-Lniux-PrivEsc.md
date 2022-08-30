@@ -43,6 +43,7 @@ Jos löytyy jotain, täältä hyväksikäyttötavat:
 https://gtfobins.github.io/
 
 **SUID-haavoittuvuudet**
+
 SUID -bitti suorittaa ohjelman aina ohjelman omistajan oikeuksilla, riippumatta ajajasta.
 Ohjelmat, joissa SUID-bitti asetettu:
 ```bash
