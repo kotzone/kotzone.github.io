@@ -40,5 +40,7 @@ type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr
 ```cmd
 type C:\inetpub\wwwroot\web.config | findstr connectionString
 ```
-
-
+PuTTY:n tallentamat Proxy-tunnukset:
+```cmd
+reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
+```
