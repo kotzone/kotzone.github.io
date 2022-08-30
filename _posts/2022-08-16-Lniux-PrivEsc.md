@@ -41,6 +41,11 @@ gcc tiedosto.c -o tiedosto -w
 ```
 
 **PATH -haavoittuvuudet**
+```bash
+echo $PATH
+```
+```bash
+find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u
 Jos PATH-muuttujassa on kansio, johon käyttäjä pääsee kirjoittamaan, voidaan ko. kansiosta ajaa haittaohjelma root-oikeuksilla.
 
 ```c
