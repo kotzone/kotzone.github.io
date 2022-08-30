@@ -9,3 +9,13 @@ SYSTEM / LocalSystem: Käyttöjärjestelmän käyttämä tunnus käyttöjärjest
 Local Service: Oletuskäyttäjä "minimioikeuksilla" Windowsin palvelujen ajamiseen, anonyymit yhteydet verkon yli.
 
 Network Service: Sama kuin yllä, mutta käyttää tietokoneen tunnuksia autentikoitumiseen verkon yli.
+
+** Selkokielisten tunnusten etsimispaikkoja **
+WDS:llä asennetut "Unattended Windows Installations" saattavat jättää admin-tunnuksia näihin sijainteihin:
+```bash
+C:\Unattend.xml
+C:\Windows\Panther\Unattend.xml
+C:\Windows\Panther\Unattend\Unattend.xml
+C:\Windows\system32\sysprep.inf
+C:\Windows\system32\sysprep\sysprep.xml
+```
