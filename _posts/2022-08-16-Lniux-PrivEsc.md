@@ -11,8 +11,8 @@ Usein käyttöoikeuksien nostamisen mahdollistaa väärin konfiguroidut käyttö
 ```bash
 hostname ## Voi löytyä tietoa järjestelmän käyttötarkoituksesta
 uname -a ## Kernel -versio
-/etc/issue ## Voi löytyä tietoa käyttöjärjestelmästä 
-/proc/version ## Tietoa prosesseista, kernelistä, ja esim. onko compiler (esim. gcc) asennettu
+cat /etc/issue ## Voi löytyä tietoa käyttöjärjestelmästä 
+cat /proc/version ## Tietoa prosesseista, kernelistä, ja esim. onko compiler (esim. gcc) asennettu
 ps ## Process Status, pyörivät prosessit. "ps -A" = kaikki, "ps axjf" = prosessipuu
 env ## Ympäristömuuttujat, esim. PATH
 sudo -l ## Kaikki komennot, jota käyttäjä voi ajaa sudona
