@@ -11,6 +11,7 @@ Local Service: Oletuskäyttäjä "minimioikeuksilla" Windowsin palvelujen ajamis
 Network Service: Sama kuin yllä, mutta käyttää tietokoneen tunnuksia autentikoitumiseen verkon yli.
 
 **Selkokielisten tunnusten etsimispaikkoja**
+
 WDS:llä asennetut "Unattended Windows Installations" saattavat jättää admin-tunnuksia näihin sijainteihin:
 ```bash
 C:\Unattend.xml
