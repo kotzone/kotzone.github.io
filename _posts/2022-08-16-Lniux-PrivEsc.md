@@ -31,7 +31,16 @@ find / -perm -u=s -type f ## SUID -bittiset tiedostot
 ```
 
 **Kernel-haavoittuvuudet**
+
 https://www.linuxkernelcves.com/cves
+
+**Sudo-haavoittuvuudet**
+Listaa käyttäjän sudo-oikeudella ajettavat ohjelmat:
+```bash
+sudo -l
+```
+Jos löytyy jotain, täältä hyväksikäyttötavat:
+https://gtfobins.github.io/
 
 **SUID-haavoittuvuudet**
 Ohjelmat, joissa SUID-bitti asetettu:
@@ -48,7 +57,7 @@ echo $PATH
 ```
 Kansiot, joihin kirjoitusoikeus:
 ```bash
-find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u
+find / -writable 2>/dev/null | cut -d "/" -f 2,3 | sort -u
 ```
 Jos PATH-muuttujassa on kansio, johon käyttäjä pääsee kirjoittamaan, voidaan ko. kansiosta ajaa ohjelma root-oikeuksilla.
 
