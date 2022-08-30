@@ -47,9 +47,7 @@ Ohjelmat, joissa SUID-bitti asetettu:
 ```bash
 find / -type f -perm -04000 -ls 2>/dev/null
 ```
-Jos löytyy mielenkiintoisen näköisiä, tarkistetaan täältä:
-https://gtfobins.github.io/
-
+Jos löytyy mielenkiintoisen näköisiä, tarkistetaan GTFObinsistä.
 
 **PATH -haavoittuvuudet**
 ```bash
@@ -76,5 +74,6 @@ void main()
 }
 ```
 ```bash
-gcc .c -o tiedosto -w
+gcc koodi.c -o koodi -w
 ```
+--Lisää ohje SUID-bitistä ym.--
