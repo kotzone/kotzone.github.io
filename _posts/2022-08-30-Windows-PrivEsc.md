@@ -53,3 +53,8 @@ Lisätietoja yksittäisestä tehtävästä:
 ```cmd
 schtasks /query /tn *TaskName* /fo list /v
 ```
+Task to run kertoo ajettavan tiedoston (esim. .bat scripti), Task as user kertoo käyttäjätunnuksen, jolla tehtävä ajetaan. Alla olevalla komennolla tarkistetaan ko. tiedoston kirjoitusoikeudet, ja jos nykyisellä käyttäjällä voidaan kirjoittaa, niin voidaan muokata scriptiä, ja se ajetaan Task as user-tunnuksella. 
+```cmd
+icalcs C:\polku\tiedostoon\scripti.bat
+```
+
