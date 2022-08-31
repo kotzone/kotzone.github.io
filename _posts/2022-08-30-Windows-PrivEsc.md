@@ -44,3 +44,12 @@ PuTTY:n tallentamat Proxy-tunnukset:
 ```cmd
 reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
 ```
+**Ajastetut tehtävät**
+Listaa ajastetut tehtävät:
+```cmd
+schtasks
+```
+Lisätietoja yksittäisestä tehtävästä:
+```cmd
+schtasks /query /tn *TaskName* /fo list /v
+```
