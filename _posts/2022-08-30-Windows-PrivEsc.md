@@ -66,3 +66,4 @@ Netcat -kuuntelumoodiin omalle koneelle porttiin 9999:
 ```cmd
 nc -ncvlp 9999
 ```
+Seuraavan ajastuksen yhteydessä aukeaa shell "Task as user" -tunnuksella.
