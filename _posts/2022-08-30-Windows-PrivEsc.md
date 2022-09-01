@@ -69,6 +69,7 @@ nc -lvp 9999
 Seuraavan ajastuksen yhteydessä aukeaa shell "Task as user" -tunnuksella.
 
 **AllwaysInstallElevated**
+
 Windowsin asennustiedostot .msi käynnistyvät oletuksena käyttäjän oikeuksilla, mutta voidaan konfiguroida käynnistymään myös korkeammilla oikeuksilla. Jos **molemmat** alla olevat rekisterin muokkaukset onnistuvat:
 ```cmd
 reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer
