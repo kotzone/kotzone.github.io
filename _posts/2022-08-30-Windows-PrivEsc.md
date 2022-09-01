@@ -106,3 +106,14 @@ Siirretään päälle, ja annetaan oikeudet:
 icacls service.exe /grant Everyone:F
 ```
 Jonka jälkeen netcat kuuntelija --> reverse shell, kun service käynnistyy uudelleen.
+
+**Unquoted Service Paths**
+
+Jos servicen BINARY_PATH_NAME ei ole laitettu oikein heittomerkkeihin, syntyy välilyönneistä mahdollisuus hyväksikäytölle. Esim. polun C:\Programs\SFTP Siirto Työkalu\run.exe yrittää SCM arvata oikeaa polkua järjestyksessä:
+
+C:\Programs\SFTP.exe, Siirto, Työkalu\run.exe
+
+C:\Programs\SFTP Siirto.exe, Työkalu\run.exe
+
+C:\Programs\SFTP Siirto Työkalu\run.exe
+
