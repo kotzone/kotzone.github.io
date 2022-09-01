@@ -109,7 +109,7 @@ Jonka jälkeen netcat kuuntelija --> reverse shell, kun service käynnistyy uude
 
 **Unquoted Service Paths**
 
-Jos servicen BINARY_PATH_NAME ei ole laitettu oikein heittomerkkeihin, syntyy välilyönneistä mahdollisuus hyväksikäytölle. Esim. polun C:\Programs\SFTP Siirto Työkalu\run.exe yrittää SCM arvata oikeaa polkua järjestyksessä:
+Jos servicen BINARY_PATH_NAME ei ole laitettu oikein heittomerkkeihin, syntyy välilyönneistä mahdollisuus hyväksikäytölle. Esim. polun C:\MyPrograms\SFTP Siirto Työkalu\run.exe yrittää SCM arvata oikeaa polkua järjestyksessä:
 
 C:\Programs\SFTP.exe, Siirto, Työkalu\run.exe
 
