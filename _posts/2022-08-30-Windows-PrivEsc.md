@@ -105,3 +105,4 @@ Siirretään päälle, ja annetaan oikeudet:
 ```cmd
 icacls service.exe /grant Everyone:F
 ```
+Jonka jälkeen netcat kuuntelija --> reverse shell, kun service käynnistyy uudelleen.
