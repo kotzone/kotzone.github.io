@@ -121,11 +121,11 @@ Jos käyttäjällä on MyPrograms -kansioon kirjoitusoikeudet, voidaan luoda msf
 
 **Servicen config-muutosoikeudet**
 
-Jos käyttäjä voi muuttaa servicen konfigurointia, voi hyökkääjä muuttaa suoritettavan komennon toiseksi ja saada tätä kautta ajettua omaa koodia servicen käynnistystunnuksena. Apuna käytetään windowsin AccessChk -työkalua. Etsitään oikea polku, jonka jälkeen:
+Jos käyttäjä voi muuttaa servicen konfigurointia, voi hyökkääjä muuttaa suoritettavan komennon toiseksi ja saada tätä kautta ajettua omaa koodia servicen käynnistystunnuksena. Apuna voidaan käyttää windowsin AccessChk -työkalua. Tarkistetaan servicen configurointioikeudet:
 ```cmd
 C:\polku\accesschk64.exe -qlc servicen_nimi
 ```
-Luodaan payload, tuodaan kohteelle, annetaan ajo-oikeudet:
+Jos havaitaan, että konffeja voidaan muuttaa: Luodaan payload, tuodaan kohteelle, annetaan ajo-oikeudet:
 ```cmd
 icacls C:\polku\payload.exe /grant Everyone:F
 ```
