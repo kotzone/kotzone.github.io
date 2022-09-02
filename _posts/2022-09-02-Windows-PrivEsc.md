@@ -111,9 +111,10 @@ Jonka jälkeen netcat kuuntelija --> reverse shell, kun service käynnistyy uude
 
 Jos servicen BINARY_PATH_NAME ei ole laitettu oikein heittomerkkeihin, syntyy välilyönneistä mahdollisuus hyväksikäytölle. Esim. polun C:\MyPrograms\SFTP Siirto Työkalu\run.exe yrittää SCM arvata oikeaa polkua järjestyksessä:
 
-C:\Programs\SFTP.exe, Siirto, Työkalu\run.exe
+C:\MyPrograms\SFTP.exe, Siirto, Työkalu\run.exe
 
-C:\Programs\SFTP Siirto.exe, Työkalu\run.exe
+C:\MyPrograms\SFTP Siirto.exe, Työkalu\run.exe
 
-C:\Programs\SFTP Siirto Työkalu\run.exe
+C:\MyPrograms\SFTP Siirto Työkalu\run.exe
 
+Jos käyttäjällä on MyPrograms -kansioon kirjoitusoikeudet, voidaan luoda msfvenomilla payload nimellä SFTP.exe ja viedä se MyPrograms -kansioon, jolloin servicen uudelleenkäynnistyessä se suoritetaan serviceen asetetulla käyttäjätunnuksella.
