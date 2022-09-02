@@ -1,4 +1,4 @@
-## Privilege Escalation: Windows ##
+## Privilege Escalation: Windows
 
 Windowsissa tavalliset käyttäjät kuuluvat Users -käyttäjäryhmään, administraattorit Administrators -käyttäjäryhmään.
 
