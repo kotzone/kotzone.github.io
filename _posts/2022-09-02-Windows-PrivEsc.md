@@ -125,7 +125,7 @@ Jos käyttäjä voi muuttaa servicen konfigurointia, voi hyökkääjä muuttaa s
 ```cmd
 C:\polku\accesschk64.exe -qlc servicen_nimi
 ```
-Jos havaitaan, että konffeja voidaan muuttaa: Luodaan payload, tuodaan kohteelle, annetaan ajo-oikeudet:
+Jos havaitaan, että konffeja voidaan muuttaa: luodaan payload, tuodaan kohteelle, annetaan ajo-oikeudet:
 ```cmd
 icacls C:\polku\payload.exe /grant Everyone:F
 ```
