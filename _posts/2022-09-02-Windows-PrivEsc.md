@@ -118,3 +118,10 @@ C:\MyPrograms\SFTP Siirto.exe, argumentit "Työkalu\run.exe"
 C:\MyPrograms\SFTP Siirto Työkalu\run.exe
 
 Jos käyttäjällä on MyPrograms -kansioon kirjoitusoikeudet, voidaan luoda msfvenomilla payload nimellä SFTP.exe ja viedä se MyPrograms -kansioon, jolloin servicen uudelleenkäynnistyessä se suoritetaan serviceen asetetulla käyttäjätunnuksella.
+
+**Service muutosoikeudet**
+
+Jos käyttäjä voi muuttaa servicen konfigurointia, voi hyökkääjä muuttaa suoritettavan komennon toiseksi ja saada tätä kautta ajettua omaa koodia servicen käynnistystunnuksena. Apuna käytetään windowsin AccessChk -työkalua. Etsitään oikea polku, jonka jälkeen:
+```cmd
+C:\polku\accesschk64.exe -qlc servicen_nimi
+```
