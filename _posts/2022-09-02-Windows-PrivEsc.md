@@ -134,4 +134,10 @@ jonka jälkeen muutetaan config ohjaamaan payloadiin (huomaa välilyönnit):
 sc config servicen_nimi binPath= "C:\polku\payload.exe" obj= LocalSystem
 ```
 
+## Käyttäjän privilege
+```cmd
+whoami /priv
+```
+Lista vaarallisista privilegeistä: https://github.com/gtworek/Priv2Admin
 
+SeBackup / SeRestore
