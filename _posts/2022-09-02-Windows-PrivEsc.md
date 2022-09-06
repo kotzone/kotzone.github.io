@@ -175,5 +175,7 @@ python3.9 /opt/impacket/examples/psexec.py -hashes q1w2e3r4t5y6u7iu:9o8i7u6y5t4r
 
 Enumerointi:
 WinPEAS - https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+
 PrivescCheck - https://github.com/itm4n/PrivescCheck
 
+https://github.com/bitsadmin/wesng
