@@ -140,7 +140,7 @@ whoami /priv
 ```
 Lista vaarallisista privilegeistä: https://github.com/gtworek/Priv2Admin
 
-**SeBackup / SeRestore
+**SeBackup / SeRestore**
 
 Jos käyttäjällä SeBackup / SeRestore oikeudet, voidaan esim. kopioida SAM ja SYSTEM rekisteritiedot ja saada Administratorin salasana-hash käyttöön. Command promt auki Run as administrator -> 
 ```cmd
@@ -171,4 +171,9 @@ Ja kirjautuminen hasheja käyttämällä:
 ```sh
 python3.9 /opt/impacket/examples/psexec.py -hashes q1w2e3r4t5y6u7iu:9o8i7u6y5t4r3e2w12q administrator@UHRIN_IP
 ```
+## Työkaluja
+
+Enumerointi:
+WinPEAS - https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+PrivescCheck - https://github.com/itm4n/PrivescCheck
 
